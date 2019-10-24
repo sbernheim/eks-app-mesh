@@ -5,4 +5,5 @@ bases:
   - flux
 patchesStrategicMerge:
   - overlays/podinfo.yaml
+  - overlays/hpa.yaml
 
