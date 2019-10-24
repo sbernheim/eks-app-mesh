@@ -1,0 +1,164 @@
+{"level":"info","ts":"2019-10-24T01:41:03.595Z","caller":"flagger/main.go:125","msg":"Starting flagger version 0.19.0 revision f372523fb8cd38b1f19dafe572d6808ce9d9ad4c mesh provider appmesh"}
+{"level":"info","ts":"2019-10-24T01:41:03.603Z","caller":"flagger/main.go:157","msg":"Connected to Kubernetes API v1.14.6-eks-5047ed"}
+{"level":"error","ts":"2019-10-24T01:41:03.735Z","caller":"flagger/main.go:171","msg":"Metrics server http://appmesh-prometheus:9090 unreachable Get http://appmesh-prometheus:9090/api/v1/status/flags: dial tcp: lookup appmesh-prometheus on 10.100.0.10:53: no such host","stacktrace":"main.main\n\t/home/circleci/build/cmd/flagger/main.go:171\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203"}
+{"level":"info","ts":"2019-10-24T01:41:03.736Z","caller":"server/server.go:29","msg":"Starting HTTP server on port 8080"}
+{"level":"info","ts":"2019-10-24T01:41:03.737Z","caller":"flagger/main.go:199","msg":"Waiting for informer caches to sync"}
+{"level":"info","ts":"2019-10-24T01:41:03.837Z","caller":"controller/controller.go:149","msg":"Starting operator"}
+{"level":"info","ts":"2019-10-24T01:41:03.837Z","caller":"controller/controller.go:158","msg":"Started operator workers"}
+{"level":"info","ts":"2019-10-24T02:06:03.298Z","caller":"controller/controller.go:235","msg":"Synced demo/podinfo"}
+{"level":"info","ts":"2019-10-24T02:06:03.876Z","caller":"canary/deployer.go:278","msg":"Deployment podinfo-primary.demo created","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:03.876Z","caller":"canary/deployer.go:50","msg":"Scaling down podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:03.913Z","caller":"canary/deployer.go:331","msg":"HorizontalPodAutoscaler podinfo-primary.demo created","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:03.937Z","caller":"router/kubernetes.go:132","msg":"Service podinfo.demo created","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:03.954Z","caller":"router/kubernetes.go:132","msg":"Service podinfo-canary.demo created","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:03.971Z","caller":"router/kubernetes.go:132","msg":"Service podinfo-primary.demo created","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:03.992Z","caller":"router/appmesh.go:137","msg":"VirtualNode podinfo.demo created","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:04.004Z","caller":"router/appmesh.go:137","msg":"VirtualNode podinfo-primary.demo created","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:04.016Z","caller":"router/appmesh.go:137","msg":"VirtualNode podinfo-canary.demo created","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:04.027Z","caller":"router/appmesh.go:292","msg":"VirtualService podinfo.demo created","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:04.036Z","caller":"router/appmesh.go:292","msg":"VirtualService podinfo-canary.demo created","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:04.041Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 0 of 1 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:13.854Z","caller":"canary/deployer.go:50","msg":"Scaling down podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:13.932Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 0 of 1 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:23.853Z","caller":"canary/deployer.go:50","msg":"Scaling down podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:23.923Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 0 of 2 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:33.853Z","caller":"canary/deployer.go:50","msg":"Scaling down podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:33.930Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 0 of 2 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:43.853Z","caller":"canary/deployer.go:50","msg":"Scaling down podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:43.918Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 0 of 2 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:53.853Z","caller":"canary/deployer.go:50","msg":"Scaling down podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:06:53.942Z","caller":"controller/controller.go:261","msg":"Initialization done! podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:56:53.913Z","caller":"controller/controller.go:261","msg":"New revision detected! Scaling up podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:57:03.938Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo.demo waiting for rollout to finish: 0 of 2 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:57:13.939Z","caller":"controller/controller.go:261","msg":"Starting canary analysis for podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:57:13.955Z","caller":"controller/controller.go:261","msg":"Pre-rollout check acceptance-test passed","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:57:13.973Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 5","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:57:23.947Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 10","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:57:33.964Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 15","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:57:43.946Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 20","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:57:53.946Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 25","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:58:03.951Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 30","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:58:13.943Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 35","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:58:23.947Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 40","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:58:33.947Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 45","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:58:43.947Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 50","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:58:53.939Z","caller":"controller/controller.go:261","msg":"Copying podinfo.demo template spec to podinfo-primary.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:59:03.916Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 1 out of 2 new replicas have been updated","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:59:13.907Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 1 old replicas are pending termination","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:59:23.904Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 1 old replicas are pending termination","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:59:33.914Z","caller":"controller/controller.go:261","msg":"Routing all traffic to primary","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T02:59:43.947Z","caller":"controller/controller.go:261","msg":"Promotion completed! Scaling down podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:03:43.917Z","caller":"controller/controller.go:261","msg":"New revision detected! Scaling up podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:03:53.928Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo.demo waiting for rollout to finish: 0 of 2 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:04:03.931Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo.demo waiting for rollout to finish: 1 of 2 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:04:13.924Z","caller":"controller/controller.go:261","msg":"Starting canary analysis for podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:04:13.939Z","caller":"controller/controller.go:261","msg":"Pre-rollout check acceptance-test passed","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:04:13.957Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 5","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:04:23.957Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 10","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:04:33.947Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 15","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:04:43.947Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 20","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:04:53.960Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 25","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:05:03.949Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 30","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:05:13.947Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 35","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:05:23.953Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 40","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:05:33.952Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 45","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:05:43.946Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 50","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:05:53.935Z","caller":"controller/controller.go:261","msg":"Copying podinfo.demo template spec to podinfo-primary.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:06:03.910Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 1 out of 2 new replicas have been updated","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:06:13.909Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 1 old replicas are pending termination","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:06:23.917Z","caller":"controller/controller.go:261","msg":"Routing all traffic to primary","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:06:33.944Z","caller":"controller/controller.go:261","msg":"Promotion completed! Scaling down podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:09:13.919Z","caller":"controller/controller.go:261","msg":"New revision detected! Scaling up podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:09:23.927Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo.demo waiting for rollout to finish: 0 of 2 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:09:33.931Z","caller":"controller/controller.go:261","msg":"Starting canary analysis for podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:09:33.946Z","caller":"controller/controller.go:261","msg":"Pre-rollout check acceptance-test passed","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:09:33.964Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 5","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:09:43.928Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement success rate 46.20% < 99%","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:09:53.930Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement success rate 34.04% < 99%","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:10:03.931Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement success rate 37.77% < 99%","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:10:13.934Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement success rate 37.46% < 99%","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:10:23.926Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement success rate 37.11% < 99%","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:10:33.932Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement success rate 32.95% < 99%","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:10:43.929Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement success rate 38.33% < 99%","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:10:53.929Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement success rate 35.38% < 99%","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:11:03.944Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement success rate 35.82% < 99%","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:11:13.932Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement success rate 38.33% < 99%","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:11:23.927Z","caller":"controller/controller.go:271","msg":"Rolling back podinfo.demo failed checks threshold reached 10","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:11:23.937Z","caller":"controller/controller.go:271","msg":"Canary failed! Scaling down podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:16:03.925Z","caller":"controller/controller.go:261","msg":"New revision detected! Scaling up podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:16:13.925Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo.demo waiting for rollout to finish: 0 of 2 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:16:23.929Z","caller":"controller/controller.go:261","msg":"Starting canary analysis for podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:16:23.943Z","caller":"controller/controller.go:261","msg":"Pre-rollout check acceptance-test passed","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:16:23.961Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 5","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:16:33.955Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 10","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:16:43.961Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 15","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:16:53.948Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 20","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:17:03.948Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 25","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:17:13.928Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement request duration 2.402s > 500ms","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:17:23.932Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement request duration 2.443s > 500ms","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:17:33.933Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement request duration 2.455s > 500ms","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:17:43.931Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement request duration 2.425s > 500ms","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:17:53.930Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement request duration 2.44s > 500ms","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:18:03.931Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement request duration 2.449s > 500ms","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:18:13.928Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement request duration 2.42s > 500ms","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:18:23.930Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement request duration 2.387s > 500ms","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:18:33.930Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement request duration 2.387s > 500ms","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:18:43.929Z","caller":"controller/controller.go:271","msg":"Halt podinfo.demo advancement request duration 2.394s > 500ms","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:18:53.928Z","caller":"controller/controller.go:271","msg":"Rolling back podinfo.demo failed checks threshold reached 10","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:18:53.937Z","caller":"controller/controller.go:271","msg":"Canary failed! Scaling down podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:20:03.917Z","caller":"controller/controller.go:261","msg":"New revision detected! Scaling up podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:20:13.929Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo.demo waiting for rollout to finish: 0 of 1 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:20:23.927Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo.demo waiting for rollout to finish: 1 of 2 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:20:33.927Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo.demo waiting for rollout to finish: 1 of 2 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:20:43.927Z","caller":"controller/controller.go:261","msg":"Starting canary analysis for podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:20:43.941Z","caller":"controller/controller.go:261","msg":"Pre-rollout check acceptance-test passed","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:20:43.966Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 5","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:20:53.949Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 10","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:21:03.955Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 15","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:21:13.945Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 20","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:21:23.948Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 25","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:21:33.952Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 30","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:21:43.950Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 35","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:21:53.948Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 40","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:22:03.946Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 45","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:22:13.956Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 50","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:22:23.934Z","caller":"controller/controller.go:261","msg":"Copying podinfo.demo template spec to podinfo-primary.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:22:33.909Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 1 out of 2 new replicas have been updated","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:22:43.910Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 1 old replicas are pending termination","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:22:53.907Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 2 of 3 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:23:03.917Z","caller":"controller/controller.go:261","msg":"Routing all traffic to primary","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T03:23:13.938Z","caller":"controller/controller.go:261","msg":"Promotion completed! Scaling down podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:34:23.931Z","caller":"controller/controller.go:261","msg":"New revision detected! Scaling up podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:34:33.950Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo.demo waiting for rollout to finish: 0 of 2 updated replicas are available","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:34:43.944Z","caller":"controller/controller.go:261","msg":"Starting canary analysis for podinfo.demo","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:34:43.961Z","caller":"controller/controller.go:261","msg":"Pre-rollout check acceptance-test passed","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:34:43.980Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 5","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:34:53.971Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 10","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:35:03.970Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 15","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:35:13.962Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 20","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:35:23.970Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 25","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:35:33.968Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 30","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:35:43.965Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 35","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:35:53.974Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 40","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:36:03.970Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 45","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:36:13.964Z","caller":"controller/controller.go:261","msg":"Advance podinfo.demo canary weight 50","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:36:23.944Z","caller":"controller/controller.go:261","msg":"Copying podinfo.demo template spec to podinfo-primary.demo","canary":"podinfo.demo"}
+  []v2beta1.MetricSpec{
+  	{
+- 		Type:     "Pods",
++ 		Type:     "Resource",
+  		Object:   nil,
+- 		Pods:     s"&PodsMetricSource{MetricName:requests-per-second,TargetAverageValue:3,Selector:nil,}",
++ 		Pods:     nil,
+- 		Resource: nil,
++ 		Resource: s"&ResourceMetricSource{Name:cpu,TargetAverageUtilization:*99,TargetAverageValue:<nil>,}",
+  		External: nil,
+  	},
+  }
+ 0xc000baa3c0 0xc000d02c80 4 4
+{"level":"info","ts":"2019-10-24T17:36:23.987Z","caller":"canary/deployer.go:353","msg":"HorizontalPodAutoscaler podinfo-primary.demo updated","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:36:33.927Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 1 out of 2 new replicas have been updated","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:36:43.920Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 1 old replicas are pending termination","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:36:53.922Z","caller":"controller/controller.go:271","msg":"Halt advancement podinfo-primary.demo waiting for rollout to finish: 1 old replicas are pending termination","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:37:03.932Z","caller":"controller/controller.go:261","msg":"Routing all traffic to primary","canary":"podinfo.demo"}
+{"level":"info","ts":"2019-10-24T17:37:13.957Z","caller":"controller/controller.go:261","msg":"Promotion completed! Scaling down podinfo.demo","canary":"podinfo.demo"}

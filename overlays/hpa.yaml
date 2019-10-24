@@ -13,5 +13,5 @@ spec:
   metrics:
   - type: Pods
     pods:
-      metricName: requests-per-second
-      targetAverageValue: 3
+      metricName: http_request_duration_microseconds
+      targetAverageValue: 250
