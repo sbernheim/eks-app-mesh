@@ -9,9 +9,9 @@ spec:
     kind: Deployment
     name: podinfo
   minReplicas: 2
-  maxReplicas: 4
+  maxReplicas: 6
   metrics:
   - type: Pods
     pods:
       metricName: http_requests
-      targetAverageValue: 900 
+      targetAverageValue: 5
